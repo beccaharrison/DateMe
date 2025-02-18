@@ -1,0 +1,31 @@
+@model Application
+
+<h1>Dating Application</h1>
+
+<form method="post">
+    <label asp-for="FirstName">First Name:</label>
+    <input asp-for="FirstName"/>
+    <br />
+    <label asp-for="LastName">Last Name:</label>
+    <input asp-for="LastName"/>
+    <br />
+    <label asp-for="Age">Age:</label>
+    <input asp-for="Age"/>
+    <br />
+    <label asp-for="PhoneNumber">Phone:</label>
+    <input asp-for="PhoneNumber"/>
+    <br />
+    <label asp-for="Major">Major:</label>
+    <input asp-for="Major"/>
+    <br />
+    <label asp-for="Occupation">Occupation:</label>
+    <input asp-for="Occupation"/>
+    <br />
+    <label asp-for="CreeperStalker">Are you a Creeper and/or Stalker?</label>
+    <select asp-for="CreeperStalker">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+    <button type="submit">Submit Application</button>
+</form>
