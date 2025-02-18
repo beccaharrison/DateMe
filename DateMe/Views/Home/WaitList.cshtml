@@ -1,0 +1,34 @@
+@{
+}
+
+@model List<Application>
+
+<table class="table table-bordered">
+    <thead class="fw-bold">
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Phone</td>
+        <td>Major</td>
+        <td>Creeper and/or Stalker</td>
+    </tr>
+    </thead>
+    
+    @foreach (var x in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@x.FirstName</td>
+                <td>@x.LastName</td>
+                <td>@x.Age</td>
+                <td>@x.PhoneNumber</td>
+                <td>@x.Major</td>
+                <td>@x.CreeperStalker</td>
+                
+                <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.ApplicationId">Edit</a></td>
+                <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.ApplicationId">Delete</a></td>
+            </tr>
+        </tbody>
+    }
+</table>
